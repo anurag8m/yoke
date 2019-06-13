@@ -1,0 +1,52 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<style type="text/css">
+			.img-responsive
+			{
+				width: 150px;
+				margin: 0 auto;
+			}
+			.attendance
+			{
+				/* Rectangle 3: */
+				background: #EB1937;
+				width : 100px;
+				height : 30px;
+				border: 2px solid #FFFFFF;
+				/* Login: */
+				font-family: Roboto-Medium;
+				font-size: 12px;
+				color: #FFFFFF;
+			}
+		</style>
+		<title>Home Credit</title>
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<img class="img-responsive" class = "center-block"  src="https://content1.jdmagicbox.com/comp/pune/s9/020pxx20.xx20.180104122721.j5s9/catalogue/home-credit-customer-care--pune-city-pune-3w2ng.jpg?interpolation=lanczos-none&output-format=jpg&resize=1024:370&crop=1024:370px" ></img>
+			<a href="/allLoggedInUsersReport" class="btn btn-info center-block"  role="button">Logged-in Users</a>
+				<table class="table table-hover">
+	    		<thead>
+	    			<tr>
+			        	<th>Name</th>
+			        	<th>Employee ID</th>
+			        	<th>Check Attendance</th>
+	    			</tr>
+	    		</thead>
+	    		<tbody>
+	    			<% employees.forEach(function(emly){ %>
+	    			<tr>
+					<td><%- emly.name -%></td>
+					<td><%- emly.employee_id -%></td>
+					<td><a href="/attendance/<%= emly._id %>" class="btn btn-info" role="button">Check</a></td>
+					<!--<td><button class="btn btn-lg btn-primary btn-block"><a href="/attendance/<%= emly._id %>">Check</a></button></td>-->
+					</tr>
+					<% }); %>
+				</tbody>
+				</table>
+		</div>
+	</body>
+	</html>

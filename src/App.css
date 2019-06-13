@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*---------login page css--------------*/
+.login-border {
+  justify-content: center;
+}
+.login-css {
+  margin-top:8% !important;
+}
+.register-css {
+  margin-top:5% !important;
+}
+.yoke-logo {
+  font-size: 5em !important;
+  font-weight: bold;
+  color: #de2020;
+}
+.input-class-field {
+  padding: 9%;
+}
+.form-check-label {
+font-weight: 500;
+}
+.form-check-input {
+  margin-top: .4rem !important;
+}
+.btn-primary {
+  background-color: #de2020;
+  border-color: #de2020;
+  border-radius: 8px;
+  font-weight: 700;
+} 
+.btn-primary:hover {
+  background-color: #ce1313 !important;
+  border-color: #ce1313 !important;
+}
+p {
+  margin-bottom :.3rem !important;
+}
+.forgetpassword a {
+  color: #ce1313 !important;
+  font-weight: 1000 !important;
+  font-size: 16px;
+}
+.signup a {
+  font-weight: 1000;
+  color: #25920f;
+  font-size: 16px;
+}
+.signup {
+  font-weight: 500;
+  font-size: 16px;
+}
+input.error{
+  border : 1px solid red;
+}
+.errorMessage {
+  color : red;
+  font-size: 1.0em;
+  display: relative;
+}
+.input-group .form-control {
+width: 100% !important;
+}
+
+

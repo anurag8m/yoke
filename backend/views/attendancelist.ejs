@@ -1,0 +1,93 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+			<!--<script src="moment.js"></script>-->
+			<!--<script>-->
+			<!-- moment().format();-->
+			<!--</script>-->
+			<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>-->
+			<!--<script src="script.js"></script>-->
+			
+	    	<script type="text/javascript">
+	    	// function getdat()
+	    	// {
+	    	// 	var momentTest = moment(); 
+    		// 	return moment().format('LLLL');  
+	    	// }
+    		function Unix_timestamp(t)
+    		{
+				var dt = new Date(t*1000);
+				var hr = dt.getHours();
+				var m = "0" + dt.getMinutes();
+				var s = "0" + dt.getSeconds();
+				return hr+ ':' + m.substr(-2) + ':' + s.substr(-2);  
+    		}
+			</script>
+
+			<style type="text/css">
+			.img-responsive
+			{
+				width: 150px;
+				margin: 0 auto;
+			}
+			h4
+        	{
+        		text-align: center;
+        	}
+      /*  	tr*/
+    		/*{*/
+    		/*	text-align: center;*/
+    		/*}*/
+    		/*th*/
+    		/*{*/
+    		/*	text-align: center;*/
+    		/*}*/
+			.attendance
+			{
+				/* Rectangle 3: */
+				background: #EB1937;
+				width : 100px;
+				height : 30px;
+				border: 2px solid #FFFFFF;
+				/* Login: */
+				font-family: Roboto-Medium;
+				font-size: 12px;
+				color: #FFFFFF;
+			}
+		</style>
+		<title>Home Credit</title>
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+	</head>
+	<body>
+		<div class="container">
+			
+			<img class="img-responsive" class = "center-block"  src="https://content1.jdmagicbox.com/comp/pune/s9/020pxx20.xx20.180104122721.j5s9/catalogue/home-credit-customer-care--pune-city-pune-3w2ng.jpg?interpolation=lanczos-none&output-format=jpg&resize=1024:370&crop=1024:370px" ></img>
+				<h4><%- name1 -%></h4>
+				<!--<h2> <script>getdat()</script> </h2>-->
+				<table class="table table-hover">
+	    		<thead>
+	    			<tr>
+			        	<th>Check in/out</th>
+			        	<th>Time</th>
+						<th>Location</th>
+	    			</tr>
+	    		</thead>
+	    		<tbody>
+	    			<% empCheckins.forEach(function(chkin){ %>
+	    			<tr>
+	    			    <% if (chkin.checkin == "true") { %>
+    					<td> CHECK-IN  </td>
+    					<% }else { %>
+                        <td>  CHECK-OUT </td>
+                        <% } %>
+    					<td><%- chkin.checkedInTime -%></td>
+						<td><%- chkin.location_name  -%></td>
+					</tr>
+					<% }); %>
+				</tbody>
+				</table>
+		</div>
+	</body>
+	</html>
